@@ -1,0 +1,40 @@
+.contentContainer {
+  width: auto;
+  margin: 1vw
+}
+
+.gameBox {
+  width: 25vw;
+  height: 25vw;
+  background: #607D8B;
+  opacity: 0.8;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tileContainer {
+  width: 7vw;
+  height: 7vw;
+  background: #ffffff45;
+  margin: 0.66vw;
+  box-shadow: 2px 8px 7px #000000;
+}
+
+.tileValueStyle {
+  font-size: 5vw;
+  padding-top: 0.5vw;
+  text-align: center;
+  color: white;
+}
+
+.tileSet {
+  box-shadow: 0px 0px 5px 0px #000000;
+}
+
+.subContentText {
+  color: #ffffff;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 1.5vw;
+}

@@ -1,0 +1,30 @@
+.headerContainer {
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: transparent;
+  font-family: auto;
+  margin-bottom: 2vw;
+  padding-top: 1vw;
+}
+
+
+.mainHeader {
+  display: block;
+  font-size: 4vw;
+  color: aliceblue;
+  text-transform: capitalize;
+  margin: 1vw;
+}
+
+.subHeader {
+  display: block;
+  font-size: 2vw;
+  color: aliceblue;
+  opacity: 0.5;
+  margin: 1vw;
+}
+
+.subHeader:first-letter {
+  text-transform: capitalize;
+}
