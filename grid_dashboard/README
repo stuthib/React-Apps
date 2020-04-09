@@ -1,0 +1,43 @@
+Features Completed :
+
+1. View data-set as a grid (data.json contains close to 6000 entries).
+2. Sort data by any column.
+3. Search/Filter data by State or Cause along Auto-complete,
+   once user selects a 'Filter Data Set' by state/cause radio button.
+
+
+Packages and libraries used :
+
+1. Build and set-up : node, npm, nodemon
+2. Web server framework : Express.js
+3. Client framework : ReactJS
+4. Other libraries/frameworks : MaterialUI, lodash, axios
+
+
+Instructions to set-up the environment :
+
+1. node : Download and install node from 'https://nodejs.org/en/download/'
+2. npm : Run this command in the terminal 'npm install npm@latest -g'
+3. nodemon : Run this command in the terminal 'npm install -g nodemon'
+
+
+Instructions to execute and start the application :
+
+1. On a new terminal tab, navigate to the project folder grid_dashboard and
+run command 'nodemon server.js' to serve the data to the UI.
+2. On a new terminal tab, navigate to the project folder grid_dashboard and
+run command 'npm start'. This will start the localhost on port:5000. If it does not,
+manually open a browser tab and type 'localhost:5000'. Since the data is large, it might
+take a few seconds for the UI to load.
+
+
+Some feature improvements for future iterations :
+
+1. Search only happens when user selects an item from the auto-complete list and
+clicks on the search icon.
+Potential improvement - Search using Enter keystroke.
+2. To undo filter, user has to empty the search box and click on search icon again.
+Potential improvement - User clears the search input and hits Enter to undo filter.
+3. When rendering large datasets, pagination is a good idea to show the data,
+just so it is faster and less load on the client. This can be done by getting chunks
+from the web server in batches or from backend database itself (depends on the requirement).
