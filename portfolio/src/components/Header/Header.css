@@ -1,0 +1,15 @@
+.Header {
+  height: 10vh;
+  background-color: white;
+  opacity: 0.1;
+}
+
+.Icon-holder {
+  float: left;
+  margin: 1vw;
+}
+
+.Links-holder {
+  float: right;
+  margin: 1vw;
+}

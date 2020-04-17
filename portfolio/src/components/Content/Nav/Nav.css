@@ -1,0 +1,27 @@
+.Nav {
+  height: 90vh;
+  margin: 1.5vw;
+}
+
+.Nav ul {
+  padding-inline-start: 0vw;
+}
+
+.Nav li {
+  list-style-type: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.4;
+  margin-top: 15vh;
+  cursor: pointer;
+}
+
+.Nav li:first-child {
+  margin-top: 5vh;
+}
+
+.selected {
+  text-decoration: underline;
+  font-weight: 450;
+  opacity: 0.5;
+}
