@@ -1,16 +1,57 @@
 .Info {
   height: 90vh;
-  margin: 1.5vw;
+  margin: 0.5vw 5vw;
   width: 100%;
+  color: #FFFFFF;
+  float: right;
 }
 
 .About {
+
+}
+
+.name, .title{
+  font-size: 4vw;
+  text-align: center;
+  margin: 1vw;
+  opacity: 0.8;
+  color: #FFFFFF;
+}
+
+.title {
+  font-size: 2.2vw!important;
+  color: #09fbd3!important;
+}
+
+.description {
+  margin: 2vw 10vw;
+  font-size: 1.5vw;
+  opacity: 0.7;
 }
 
 .Education {
-  
+
 }
 
 .hideInfo {
   display: none;
+}
+
+.photo-contact {
+  margin: 4vw 10vw;
+  height: 35vh;
+}
+
+.profile-img {
+  width: 20vw;
+  float: right;
+}
+
+.btn-outline {
+  color: #09fbd3!important;
+  border: 0.1vw solid #09fbd3!important;
+  font-family: serif!important;
+  margin-top: 10vw!important;
+  font-size: 1.2vw!important;
+  padding: 0.5vw 1vw!important;
 }

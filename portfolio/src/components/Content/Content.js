@@ -6,9 +6,9 @@ import Info from './Info/Info';
 
 const navInfoMap = {
   0: 'about',
-  1: 'education',
-  2: 'experince',
-  3: 'projects',
+//  1: 'education',
+  1: 'experince',
+  2: 'projects',
 }
 
 class Content extends React.Component {
@@ -24,6 +24,7 @@ class Content extends React.Component {
       <div className='Content'>
         <Nav navItems={values(navInfoMap)}
              navItemChange={this.onNavChange}/>
+        <div className='divider' />
         <Info infoToShow={get(this.state,'infoToShow','about')}/>
       </div>
     );

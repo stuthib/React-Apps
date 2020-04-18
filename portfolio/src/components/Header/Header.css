@@ -1,7 +1,8 @@
 .Header {
-  height: 10vh;
-  background-color: white;
-  opacity: 0.1;
+  height: 4vw;
+  background-color: #09fbd3;
+  opacity: 0.8;
+  box-shadow: 0 0.5vw #000000;
 }
 
 .Icon-holder {
@@ -10,6 +11,23 @@
 }
 
 .Links-holder {
+  width: 15vw;
   float: right;
   margin: 1vw;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.header-link {
+  cursor: pointer;
+}
+
+.resume-link {
+  font-size: 1.2vw;
+  margin: 0.3vw 2vw 0vw 0vw;
+  font-weight: 600;
+  font-family: roboto;
+  text-transform: uppercase;
+  cursor: pointer;
 }

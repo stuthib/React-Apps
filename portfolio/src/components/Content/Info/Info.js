@@ -9,7 +9,6 @@ class Info extends React.Component {
 
   render() {
     let { infoToShow } = this.props;
-    console.log(this.props);
     return (
       <div className='Info'>
         <About showInfo={infoToShow === 'about'}/>
