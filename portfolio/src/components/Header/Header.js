@@ -24,7 +24,7 @@ class Header extends React.Component {
           <div className='Links-holder'>
             <GitHubIcon className='header-link' onClick={() => this.gitHubIconClick()}/>
             <LinkedInIcon className='header-link' onClick={() => this.linkedInIconClick()}/>
-            <span className='resume-link' href={resume} download>resume</span>
+            <a className='resume-link' href={resume} download>resume</a>
           </div>
         </header>
       </div>

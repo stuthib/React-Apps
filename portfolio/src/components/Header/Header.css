@@ -30,4 +30,6 @@
   font-family: roboto;
   text-transform: uppercase;
   cursor: pointer;
+  color: #13161f;
+  text-decoration: none;
 }
