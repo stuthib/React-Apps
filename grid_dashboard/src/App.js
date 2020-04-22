@@ -1,7 +1,8 @@
 import React from 'react';
 import { get, filter } from 'lodash';
 import './App.css';
-import Controls from './Controls.js';
+import Chart from './Chart';
+import Controls from './Controls';
 import GridLayout from './GridLayout';
 import PaginationControls from './PaginationControls';
 
@@ -143,6 +144,7 @@ class App extends React.Component {
         <header className='App-header'>
           <div>NCHS Data</div>
         </header>
+        <Chart />
         <Controls autoCompleteOptions={get(this.state,'autoCompleteOptions',[])}
                   filterTypeChange={this.handleFilterTypeChange.bind(this)}
                   onSearchSubmit={this.handleSearchSubmit.bind(this)}/>
