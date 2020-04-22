@@ -35,7 +35,7 @@ class Experience extends React.Component {
       kareo: kareo_logo,
       borqs: borqs_logo,
     }
-    return nameImgMap[companyName];
+    return nameImgMap[companyName.toLowerCase()];
   }
 
   render() {
@@ -50,7 +50,9 @@ class Experience extends React.Component {
           {
             companies.map((item, index) => {
               return(
-                <div className='experince-item'
+                <div className={'experince-item' +
+                                (index === selectedIndex ?
+                                  ' experince-selected' : '')}
                       onClick={() => this.experienceClick(index)}>
                   {item}
                 </div>
@@ -62,9 +64,12 @@ class Experience extends React.Component {
         <div className='experince-details'>
           <div className='logo-title'>
             <img src={this.getImage(companies[selectedIndex])}/>
-            <span>{companyDetails.title}</span>
+            <div>
+              <span>{companyDetails.title}</span>
+              <br />
+              <span className='timeframe'>{companyDetails.time}</span>
+            </div>
           </div>
-          <span className='timeframe'>{companyDetails.time}</span>
           <div className='experince-projects'>
             {
               companyDetails.projects.map((item, index) => {

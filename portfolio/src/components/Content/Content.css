@@ -4,7 +4,7 @@
 }
 
 .divider {
-  width: 1vw;
+  width: 0.1vw;
   border-right: 1px solid #09fbd3;
   height: 50vh;
   opacity: 0.1;

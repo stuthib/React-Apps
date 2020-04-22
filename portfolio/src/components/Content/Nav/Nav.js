@@ -35,6 +35,7 @@ class Nav extends React.Component {
             })
           }
         </ul>
+        <div className={'vertical-slider vertical-slider-index-'+navSelected}/>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 .Nav {
   height: 45vw;
-  margin: 1.5vw 3vw;
+  margin: 1.5vw 0vw 3vw 3vw;
+  display: flex;
 }
 
 .Nav ul {
@@ -11,7 +12,7 @@
   list-style-type: none;
   text-transform: uppercase;
   color: #FFFFFF;
-  opacity: 0.4;
+  opacity: 0.6;
   margin-top: 15vh;
   cursor: pointer;
 }
@@ -21,8 +22,26 @@
 }
 
 .selected {
-  text-decoration: underline;
   font-weight: 450;
-  opacity: 0.7!important;
-  color: #09fbd3!important;
+  opacity: 1!important;
+  color: #79FFFE!important;
+}
+
+.vertical-slider {
+  width: 3vw;
+  height: 3vw;
+  border-right: 0.2vw solid #09fbd3;
+  transition: .3s ease-in-out;
+}
+
+.vertical-slider-index-0 {
+  margin-top: 2.5vw;
+}
+
+.vertical-slider-index-1 {
+  margin-top: 11.5vw;
+}
+
+.vertical-slider-index-2 {
+  margin-top: 20.5vw;
 }

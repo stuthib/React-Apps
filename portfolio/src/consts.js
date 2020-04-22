@@ -4,7 +4,7 @@ const constants  = {
   description : 'Hi, I am a New York City based Web Front-End developer. After graduating from University of California Irvine, I started my career as an Application Developer. I build interactive, fast and scalable for the web.',
   technologies: ['JavaScript (ES6)', 'React', 'Lodash', 'HTML/CSS', 'Node.js', 'Express'],
   experince: {
-    balbix: {
+    Balbix: {
       time: 'Nov 2017 - Nov 2018',
       title: 'Software Engineer',
       projects: [
@@ -15,7 +15,7 @@ const constants  = {
         'Designed and developed a custom reusable dropdown component as a library with features like view/edit control and multi-selection.',
       ],
     },
-    egain: {
+    eGain: {
       time: 'Mar 2016 - Nov 2017',
       title: 'Solutions Engineer',
       projects: [
@@ -25,7 +25,7 @@ const constants  = {
         'Develop interfaces to implement functionalities to cover product gap. and Backup functionalities.',
       ],
     },
-    kareo: {
+    Kareo: {
       time: 'Jun 2015 - Dec 2015',
       title: 'Software Engineer Intern',
       projects: [
@@ -33,7 +33,7 @@ const constants  = {
         'Developed a CG Extension, to draw shapes on images with editable properties(color, width, text). Worked extensively on UITableview with custom cells. Built purely in Objective-C using Core Graphics APIs.',
       ],
     },
-    borqs: {
+    Borqs: {
       time: 'Aug 2012 - Jul 2013',
       title: 'Software Engineer',
       projects: [

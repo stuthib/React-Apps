@@ -11,15 +11,14 @@
 }
 
 .name, .title{
-  font-size: 4vw;
+  font-size: 3vw;
   text-align: center;
   margin: 1vw;
-  opacity: 0.8;
   color: #FFFFFF;
 }
 
 .title {
-  font-size: 2.2vw!important;
+  font-size: 2vw!important;
   color: #09fbd3!important;
 }
 
@@ -76,7 +75,7 @@
   color: #09fbd3;
   width: 1.2vw!important;
   height: 1.2vw!important;
-  margin-top: 0.1vw!important;
+  margin: 0.15vw 0.3vw!important;
 }
 
 .profile-img {
@@ -112,6 +111,11 @@
   font-size: 1.5vw;
 }
 
+.experince-selected {
+  color: #79FFFE;
+  opacity: 1!important;
+}
+
 .hr-margin-1 {
   margin-left: 25%;
 }
@@ -135,12 +139,7 @@ hr {
   margin: 2vw 0vw;
 }
 
-.experince-details > span {
-  margin-right: 2vw;
-}
-
 .experince-item {
-  text-transform: capitalize;
   cursor: pointer;
 }
 
@@ -153,18 +152,17 @@ hr {
 }
 
 .logo-title > img {
-  width: 2vw;
-  margin-top: 0.2vw;
+  width: 4vw;
+  margin-top: 0.5vw;
 }
 
-.logo-title > span {
+.logo-title > div {
   margin: 0.25vw 1vw;
   opacity: 0.8;
   font-size: 1.5vw;
 }
 
 .timeframe {
-  margin: 3vw;
   font-size: 1vw;
 }
 
