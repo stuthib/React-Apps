@@ -1,12 +1,15 @@
 .Header {
   height: 4vw;
-  background-color: #09fbd3;
-  box-shadow: 0 0.5vw #000000;
+  background-image: linear-gradient(to right, #13161f , #09fbd3);
 }
 
 .Icon-holder {
   float: left;
-  margin: 1vw;
+  margin: 0.5vw 3vw;
+}
+
+.Icon-holder > img {
+  width: 2.5vw;
 }
 
 .Links-holder {

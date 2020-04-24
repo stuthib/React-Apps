@@ -50,7 +50,7 @@ class Experience extends React.Component {
           {
             companies.map((item, index) => {
               return(
-                <div className={'experince-item' +
+                <div key={index} className={'experince-item' +
                                 (index === selectedIndex ?
                                   ' experince-selected' : '')}
                       onClick={() => this.experienceClick(index)}>
@@ -63,7 +63,7 @@ class Experience extends React.Component {
         <hr className={'hr-margin-'+selectedIndex}/>
         <div className='experince-details'>
           <div className='logo-title'>
-            <img src={this.getImage(companies[selectedIndex])}/>
+            <img src={this.getImage(companies[selectedIndex])} alt='img'/>
             <div>
               <span>{companyDetails.title}</span>
               <br />
@@ -74,7 +74,7 @@ class Experience extends React.Component {
             {
               companyDetails.projects.map((item, index) => {
                 return(
-                  <div className='project-details'>
+                  <div key={index} className='project-details'>
                     <ChevronRightIcon className='chevron-right'/>
                     <div>
                     {item}
