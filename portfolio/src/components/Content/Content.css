@@ -1,0 +1,12 @@
+.Content {
+  display: flex;
+  width: 100%;
+}
+
+.divider {
+  width: 0.1vw;
+  border-right: 1px solid #09fbd3;
+  height: 25vw;
+  opacity: 0.1;
+  margin-top: 5vh;
+}
