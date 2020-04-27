@@ -227,6 +227,7 @@ hr {
 
 .project-card-title {
   padding: 1vw;
+  height: 4vw;
   font-size: 1.5vw;
   line-height: 2vw;
 }
