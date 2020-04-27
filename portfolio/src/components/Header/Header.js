@@ -7,6 +7,52 @@ import './Header.css';
 
 class Header extends React.Component {
 
+
+  constructor(props) {
+    super(props);
+    this.showLogo = this.showLogo.bind(this);
+    this.showGitIcon = this.showGitIcon.bind(this);
+    this.showLinkedInIcon = this.showLinkedInIcon.bind(this);
+    this.showResume = this.showResume.bind(this);
+
+    this.state = {
+      displayLogo: false,
+      displayGitIcon: false,
+      displayLinkedIn: false,
+      displayResume: false,
+    };
+  }
+
+  componentDidMount() {
+    this.logoTimer = setTimeout(this.showLogo, 1000);
+    this.gitIconTimer = setTimeout(this.showGitIcon, 1000);
+    this.linkedInTimer = setTimeout(this.showLinkedInIcon, 1500);
+    this.resumeTimer = setTimeout(this.showResume, 2000);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.logoTimer);
+    clearTimeout(this.gitIconTimer);
+    clearTimeout(this.linkedInTimer);
+    clearTimeout(this.resumeTimer);
+  }
+
+  showLogo() {
+    this.setState({displayLogo: true});
+  }
+
+  showGitIcon() {
+    this.setState({displayGitIcon: true});
+  }
+
+  showLinkedInIcon() {
+    this.setState({displayLinkedIn: true});
+  }
+
+  showResume() {
+    this.setState({displayResume: true});
+  }
+
   gitHubIconClick() {
     window.open('https://github.com/stuthib/React-Apps');
     return false;
@@ -18,16 +64,23 @@ class Header extends React.Component {
   }
 
   render() {
+    const { displayLogo, displayGitIcon, displayLinkedIn, displayResume } = this.state;
     return (
       <div className='Header'>
         <header className='App-header'>
           <div className='Icon-holder'>
-            <img src={stuthi_logo} alt='logo'/>
+          {
+            displayLogo ? <img src={stuthi_logo} alt='logo'/> : ''
+          }
           </div>
           <div className='Links-holder'>
-            <GitHubIcon className='header-link' onClick={() => this.gitHubIconClick()}/>
-            <LinkedInIcon className='header-link' onClick={() => this.linkedInIconClick()}/>
-            <a className='resume-link' href={resume} download>resume</a>
+            <GitHubIcon className={'header-link' + (displayGitIcon ? ' show' : ' hide')}
+                        onClick={() => this.gitHubIconClick()} />
+            <LinkedInIcon className={'header-link' + (displayLinkedIn ? ' show' : ' hide')}
+                        onClick={() => this.linkedInIconClick()}/>
+            <a className={'resume-link' + (displayResume ? ' show' : ' hide')}
+               href={resume} download>resume</a>
+
           </div>
         </header>
       </div>

@@ -1,9 +1,25 @@
 .Info {
-  height: 90vh;
+  height: 45vw;
   margin: 0.5vw 5vw;
   width: 100%;
   color: #FFFFFF;
   float: right;
+  animation: soft-load-info forwards;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  opacity: 0;
+}
+
+@keyframes soft-load-info {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .about, .experince {
@@ -25,9 +41,14 @@
 .description {
   margin: 2vw 10vw;
   font-size: 1.2vw;
-  opacity: 0.7;
+  line-height: 2vw;
 }
 
+.link {
+  color: #09fbd3!important;
+  opacity: 1!important;
+  cursor: pointer;
+}
 .Education {
 
 }
@@ -152,27 +173,36 @@ hr {
 }
 
 .logo-title > img {
-  width: 4vw;
+  width: 5vw;
   margin-top: 0.5vw;
+  cursor: pointer;
 }
 
-.logo-title > div {
-  margin: 0.25vw 1vw;
+.logo-title > div, .experience-title > span {
+  margin: 1vw;
   opacity: 0.8;
+  font-size: 1.5vw
+}
+
+.experience-name {
   font-size: 1.5vw;
+  cursor: pointer;
+  color: #79FFFE!important;
 }
 
 .timeframe {
-  font-size: 1vw;
+  font-size: 1vw!important;
 }
 
-.experince-projects {
+.experience-projects, .experience-title {
   margin: 2vw 0vw;
+  line-height: 2vw;
 }
 
 .project-details {
   margin-bottom: 1vw;
   display: flex;
+  line-height: 1.7vw;
 }
 
 .project-details > div {
@@ -193,13 +223,14 @@ hr {
 .project-card-title {
   padding: 1vw;
   font-size: 1.5vw;
+  line-height: 2vw;
 }
 
 .project-card-details {
   padding: 1vw;
   height: 9.5vw;
   font-size: 1vw;
-  line-height: 1.5vw;
+  line-height: 1.8vw;
 }
 
 .project-card-tech {

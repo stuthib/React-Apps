@@ -38,6 +38,11 @@ class Experience extends React.Component {
     return nameImgMap[companyName.toLowerCase()];
   }
 
+  companyWebsiteClick(url) {
+    window.open(url);
+    return false;
+  }
+
   render() {
     const { showInfo } = this.props;
     const selectedIndex = get(this.state,'companySelectedIndex',0);
@@ -63,14 +68,25 @@ class Experience extends React.Component {
         <hr className={'hr-margin-'+selectedIndex}/>
         <div className='experince-details'>
           <div className='logo-title'>
-            <img src={this.getImage(companies[selectedIndex])} alt='img'/>
+            <img onClick={() => this.companyWebsiteClick(companyDetails.website)}
+                 src={this.getImage(companies[selectedIndex])} alt='img'/>
             <div>
-              <span>{companyDetails.title}</span>
+              <span className='experience-name' 
+                    onClick={() => this.companyWebsiteClick(companyDetails.website)}>
+                {companyDetails.name}
+              </span>
               <br />
-              <span className='timeframe'>{companyDetails.time}</span>
+              <span className='timeframe'>{companyDetails.location}</span>
             </div>
           </div>
-          <div className='experince-projects'>
+
+          <div className='experience-title'>
+            <span>{companyDetails.title}</span>
+            <br />
+            <span className='timeframe'>{companyDetails.time}</span>
+          </div>
+
+          <div className='experience-projects'>
             {
               companyDetails.projects.map((item, index) => {
                 return(

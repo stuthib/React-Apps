@@ -64,7 +64,7 @@ class Projects extends React.Component {
             {
               imagesToShow.map((detail, index) => {
                 return(
-                  <div className='modalDetail'>
+                  <div key={index} className='modalDetail'>
                     <img src={detail.image} alt='img'/>
                     <div>
                     {
@@ -91,7 +91,6 @@ class Projects extends React.Component {
           projects.map((item, index) => {
             let cardData = constants.projects[item];
             let showGitHubIcon = !get(cardData,'githubLink') ? ' hideGitIcon' : '';
-            console.log(item);
             return(
               <div key={index} className='project-card'>
                 <div className='card-links'>
@@ -105,7 +104,7 @@ class Projects extends React.Component {
                 {
                   cardData.technologies.map((tech, i) => {
                     return(
-                      <span>{tech}</span>
+                      <span key={i}>{tech}</span>
                     )
                   })
                 }

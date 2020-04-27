@@ -1,7 +1,10 @@
 .Nav {
   height: 45vw;
+  width: 15vw;
   margin: 1.5vw 0vw 3vw 3vw;
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .Nav ul {
@@ -13,12 +16,57 @@
   text-transform: uppercase;
   color: #FFFFFF;
   opacity: 0.6;
-  margin-top: 15vh;
+  height: 2vw;
+  //margin-top: 7.5vw;
   cursor: pointer;
 }
 
+.showNav {
+  position: absolute;
+  left: -10vw;
+  width: 10vw;
+  height: 5vw;
+}
+
+.showNav_0 {
+  -webkit-animation: navItem 0.5s forwards;
+  -webkit-animation-delay: 3s;
+  animation: navItem 0.5s forwards;
+  animation-delay: 3s;
+}
+
+.showNav_1 {
+  -webkit-animation: navItem 0.5s forwards;
+  -webkit-animation-delay: 3.5s;
+  animation: navItem 0.5s forwards;
+  animation-delay: 3.5s;
+}
+
+.showNav_2 {
+  -webkit-animation: navItem 0.5s forwards;
+  -webkit-animation-delay: 4s;
+  animation: navItem 0.5s forwards;
+  animation-delay: 4s;
+}
+
+@-webkit-keyframes navItem {
+    100% { left: 0; }
+}
+
+@keyframes navItem {
+    100% { left: 0; }
+}
+
 .Nav li:first-child {
-  margin-top: 5vh;
+  margin-top: 2.5vw;
+}
+
+.Nav li:nth-child(2) {
+  margin-top: 10.5vw;
+}
+
+.Nav li:nth-child(3) {
+  margin-top: 18.5vw;
 }
 
 .selected {
@@ -30,8 +78,21 @@
 .vertical-slider {
   width: 3vw;
   height: 3vw;
-  border-right: 0.2vw solid #09fbd3;
   transition: .3s ease-in-out;
+  margin-left: 8vw;
+  position: absolute;
+  animation: soft-load forwards;
+  animation-delay: 4s;
+  animation-duration: 2s;
+}
+
+@keyframes soft-load {
+
+  0% {opacity: 0;}
+  100% {
+    opacity: 1;
+    border-right: 0.2vw solid #79FFFE;
+  }
 }
 
 .vertical-slider-index-0 {
@@ -39,9 +100,9 @@
 }
 
 .vertical-slider-index-1 {
-  margin-top: 11.5vw;
+  margin-top: 10.5vw;
 }
 
 .vertical-slider-index-2 {
-  margin-top: 20.5vw;
+  margin-top: 18.5vw;
 }

@@ -1,12 +1,20 @@
 const constants  = {
   name : 'Stuthi Balaji',
-  title : 'Software Engineer, Web developer',
-  description : 'Hi, I am a New York City based Web Front-End developer. After graduating from University of California Irvine, I started my career as an Application Developer. I build interactive, fast and scalable for the web.',
+  title : 'Web Software Engineer',
+  description: [
+    'I am a New York based Software Engineer specializing in interactive web applications. ',
+    'I graduated from ',
+    'University of California Irvine',
+    ', and since then have worked as an application developer. I believe in using modern technologies and frameworks to build high quality products.',
+  ],
   technologies: ['JavaScript (ES6)', 'React', 'Lodash', 'HTML/CSS', 'Node.js', 'Express'],
   experince: {
     Balbix: {
+      name: 'Balbix Inc.',
+      location: 'San Jose, CA',
       time: 'Nov 2017 - Nov 2018',
       title: 'Software Engineer',
+      website: 'https://www.balbix.com/',
       projects: [
         'Responsible for architecting and developing the following user intensive application dashboards using ReactJS, Material UI, Victory Chart, Lodash, Javascript.',
         'User Preferences Dashboard​ to manage user profile information, notification and subscription preferences.',
@@ -16,8 +24,11 @@ const constants  = {
       ],
     },
     eGain: {
+      name: 'eGain Communications',
+      location: 'Sunnyvale, CA',
       time: 'Mar 2016 - Nov 2017',
       title: 'Solutions Engineer',
+      website: 'https://www.egain.com/',
       projects: [
         'Building customized web packages for small and medium scale suites. Web page development using eGain REST APIs to extract data and display it using AngularJs and other front-end frameworks.',
         'Customizable Single Sign-on using Security Assertion Markup Language(SAML). Designed and implemented web service which collects data from SAML response and passes it to eGain application for routing.',
@@ -26,16 +37,23 @@ const constants  = {
       ],
     },
     Kareo: {
+      name: 'Kareo',
+      link:'',
+      location: 'Irvine, CA',
       time: 'Jun 2015 - Dec 2015',
       title: 'Software Engineer Intern',
+      website: 'https://www.kareo.com/',
       projects: [
         'Developed functionality such as dynamically expandable UILabel (custom rendering) based on the input typed by the user, custom UIPickerView (remote data source) to show custom content for customer contact forms.',
         'Developed a CG Extension, to draw shapes on images with editable properties(color, width, text). Worked extensively on UITableview with custom cells. Built purely in Objective-C using Core Graphics APIs.',
       ],
     },
     Borqs: {
+      name: 'Borqs',
+      location: 'Bangalore, India',
       time: 'Aug 2012 - Jul 2013',
       title: 'Software Engineer',
+      website: 'http://www.borqs.com/',
       projects: [
         'Developed features for android frameworks related to home screen widgets and lock screens for various network provider companies. Developed resizable widgets that generated extendable views.',
         'Managed migration of the android frameworks from older to newer releases by reducing UI compatibility issues.',
@@ -46,7 +64,7 @@ const constants  = {
   projects: {
     'NCHS Dashboard': {
       title: 'Data Visualization Dashboard',
-      description: 'Sunburst and grid representation of NCHS data, with auto-complete search and sorting functionality.',
+      description: 'Sunburst and Grid representation of National Center for Health Statistics data, with auto-complete search and sorting functionality.',
       technologies: ['React', 'Express', 'Lodash', 'CSS'],
       githubLink: 'https://github.com/stuthib/React-Apps/tree/master/grid_dashboard',
       projectDetails: ['Sunburst Chart representation of the entire data provided by National Center for Health Statistics. This is an overall view of the given data.',

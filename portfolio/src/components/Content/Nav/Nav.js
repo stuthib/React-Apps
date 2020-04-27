@@ -1,12 +1,20 @@
 import React from 'react';
 import './Nav.css';
 
+let timers = [];
+
 class Nav extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       navSelected : 0,
+    }
+  }
+
+  componentWillUnmount() {
+    for(let i = 0; i < 3; i++) {
+      clearTimeout(timers[i]);
     }
   }
 
@@ -27,7 +35,8 @@ class Nav extends React.Component {
             navItems.map((item, index) => {
               return(
                 <li key={index}
-                    className={(index === navSelected) ? 'selected' : ''}
+                    id={'navItem_'+index}
+                    className={'showNav showNav_' + index + ((index === navSelected) ? ' selected ' : '')}
                     onClick={() => this.onNavItemClick(index)}>
                   {item}
                 </li>

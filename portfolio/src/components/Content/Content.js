@@ -25,7 +25,10 @@ class Content extends React.Component {
         <Nav navItems={values(navInfoMap)}
              navItemChange={this.onNavChange}/>
         <div className='divider' />
-        <Info infoToShow={get(this.state,'infoToShow','about')}/>
+        {
+          this.props.display ?
+          <Info infoToShow={get(this.state,'infoToShow','about')}/> :''
+        }
       </div>
     );
   }

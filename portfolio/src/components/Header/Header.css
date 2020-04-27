@@ -13,21 +13,29 @@
 }
 
 .Links-holder {
-  width: 15vw;
+  width: 26vw;
   float: right;
   margin: 1vw;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+}
+
+.show {
+  display: block!important;
+}
+
+.hide {
+  display: none!important;
 }
 
 .header-link {
   cursor: pointer;
+  width: 7vw!important;
 }
 
 .resume-link {
   font-size: 1.2vw;
-  margin: 0.3vw 2vw 0vw 0vw;
+  margin: 0.3vw 2vw 0vw 1.5vw;
   font-weight: 600;
   font-family: roboto;
   text-transform: uppercase;
