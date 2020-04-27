@@ -11,6 +11,10 @@ import sunburst_main  from '../../../../attachments/nchs_dashboard/sunburst_main
 import sunburst_detail_view  from '../../../../attachments/nchs_dashboard/sunburst_detailed.png';
 import grid_view  from '../../../../attachments/nchs_dashboard/gridview.png';
 
+import start  from '../../../../attachments/tic_tac_toe/start.png';
+import mid  from '../../../../attachments/tic_tac_toe/mid.png';
+import end  from '../../../../attachments/tic_tac_toe/end.png';
+
 class Projects extends React.Component {
 
   gitHubIconClick(link) {
@@ -22,6 +26,7 @@ class Projects extends React.Component {
     const projectDetails = constants.projects[projectName];
     let projectImages = {
       'NCHS Dashboard': [sunburst_main, sunburst_detail_view, grid_view],
+      'Tic-Tac-Toe': [start, mid, end],
     }
     let details = projectDetails.projectDetails.map((item, index) => {
       let images = projectImages[projectName];
@@ -30,8 +35,6 @@ class Projects extends React.Component {
         description: item,
       }
     })
-    console.log(details);
-
     return details;
   }
 
@@ -59,7 +62,7 @@ class Projects extends React.Component {
           className='modalContainer'
         >
         {
-          <div className='modal-data-holder bounce-4'>
+          <div className='modal-data-holder'>
             <CloseIcon className='close-icon' onClick={() => this.closeModalView()}/>
             {
               imagesToShow.map((detail, index) => {

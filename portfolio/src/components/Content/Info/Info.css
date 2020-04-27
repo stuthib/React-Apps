@@ -210,7 +210,12 @@ hr {
 }
 
 .projects {
+  height: 45vw;
   margin: 2vw 0vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 3vw;
+  overflow: scroll;
 }
 
 .project-card {
@@ -265,15 +270,6 @@ hr {
   align-items: center;
   justify-content: center;
 }
-.bounce-4 {
-  animation-name: bounce-4;
-  animation-fill-mode: backwards;
-}
-@keyframes bounce-4 {
-  0%   { transform: scale(1,1)    translateY(0); }
-  50%  { transform: scale(.9,1.1) translateX(1px);}
-  100% { transform: scale(1,1)    translateY(0); }
-}
 
 .modal-data-holder {
   background-color: #262729;
@@ -283,7 +279,6 @@ hr {
   box-shadow: 0.25vw 1vw 1vw 1vw #000;
   overflow-y: scroll;
   outline: none;
-  -webkit-animation:bounce-4 0.4s;
 }
 
 .modalDetail {

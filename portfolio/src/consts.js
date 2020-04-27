@@ -71,7 +71,17 @@ const constants  = {
         'Clicking on one of the states, shows the detailed view. Example, clicking on California on the above chart represents this view.',
         'Grid representation of the data, which handles pagination for large data, column sorting and serach/filter along with auto-complete.',
       ]
-    }
+    },
+    'Tic-Tac-Toe': {
+      title: 'Tic Tac Toe Game',
+      description: 'Two player game application implements a countdown timer, and algorithm to decide the outcome.',
+      technologies: ['React', 'MaterialUI', 'Lodash'],
+      githubLink: 'https://github.com/stuthib/React-Apps/tree/master/tic_tac_toe',
+      projectDetails: ['State of the game before the palayers start the game.',
+        'Representation of a countdown timer during the game.',
+        'Implementation of an algorithm to decide the outcome of the game.',
+      ]
+    },
   },
 }
 
