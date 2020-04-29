@@ -7,7 +7,7 @@ import Info from './Info/Info';
 const navInfoMap = {
   0: 'about',
 //  1: 'education',
-  1: 'experince',
+  1: 'experience',
   2: 'projects',
 }
 
