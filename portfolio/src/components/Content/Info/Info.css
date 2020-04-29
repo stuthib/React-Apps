@@ -1,5 +1,5 @@
 .Info {
-  height: 45vw;
+  height: 50vw;
   margin: 0.5vw 5vw;
   width: 100%;
   color: #FFFFFF;
@@ -112,6 +112,10 @@
   font-size: 1.2vw!important;
   padding: 0.5vw 1vw!important;
   float: left;
+}
+
+.btn-outline:hover {
+  background-color: #09fbd345!important;
 }
 
  .experience-title {

@@ -28,6 +28,12 @@
   height: 5vw;
 }
 
+.selected, .showNav:hover {
+  font-weight: 450;
+  opacity: 1!important;
+  color: #79FFFE!important;
+}
+
 .showNav_0 {
   -webkit-animation: navItem 0.5s forwards;
   -webkit-animation-delay: 3s;
@@ -67,12 +73,6 @@
 
 .Nav li:nth-child(3) {
   margin-top: 18.5vw;
-}
-
-.selected {
-  font-weight: 450;
-  opacity: 1!important;
-  color: #79FFFE!important;
 }
 
 .vertical-slider {
