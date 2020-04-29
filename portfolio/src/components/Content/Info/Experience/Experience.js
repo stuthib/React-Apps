@@ -24,7 +24,7 @@ class Experience extends React.Component {
   }
 
   getCompanyInfo(companyName) {
-    const companyDetails = constants['experince'][companyName];
+    const companyDetails = constants['experience'][companyName];
     return companyDetails;
   }
 
@@ -46,18 +46,18 @@ class Experience extends React.Component {
   render() {
     const { showInfo } = this.props;
     const selectedIndex = get(this.state,'companySelectedIndex',0);
-    const companies = keys(constants.experince);
+    const companies = keys(constants.experience);
     let companyDetails = this.getCompanyInfo(companies[selectedIndex]);
     return (
-      <div className={showInfo ? 'experince' : 'hideInfo'}>
-        <span className='title experince-title'>I have worked at,</span>
-        <div className='experince-list'>
+      <div className={showInfo ? 'experience' : 'hideInfo'}>
+        <span className='title experience-title'>I have worked at,</span>
+        <div className='experience-list'>
           {
             companies.map((item, index) => {
               return(
-                <div key={index} className={'experince-item' +
+                <div key={index} className={'experience-item' +
                                 (index === selectedIndex ?
-                                  ' experince-selected' : '')}
+                                  ' experience-selected' : '')}
                       onClick={() => this.experienceClick(index)}>
                   {item}
                 </div>
@@ -66,12 +66,12 @@ class Experience extends React.Component {
           }
         </div>
         <hr className={'hr-margin-'+selectedIndex}/>
-        <div className='experince-details'>
+        <div className='experience-details'>
           <div className='logo-title'>
             <img onClick={() => this.companyWebsiteClick(companyDetails.website)}
                  src={this.getImage(companies[selectedIndex])} alt='img'/>
             <div>
-              <span className='experience-name' 
+              <span className='experience-name'
                     onClick={() => this.companyWebsiteClick(companyDetails.website)}>
                 {companyDetails.name}
               </span>

@@ -13,7 +13,7 @@ class Info extends React.Component {
       <div className='Info'>
         <About showInfo={infoToShow === 'about'}/>
         <Education showInfo={infoToShow === 'education'}/>
-        <Experience showInfo={infoToShow === 'experince'}/>
+        <Experience showInfo={infoToShow === 'experience'}/>
         <Projects showInfo={infoToShow === 'projects'}/>
       </div>
     );

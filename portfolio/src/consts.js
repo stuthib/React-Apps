@@ -8,7 +8,7 @@ const constants  = {
     ', and since then have worked as an application developer. I believe in using modern technologies and frameworks to build high quality products.',
   ],
   technologies: ['JavaScript (ES6)', 'React', 'Lodash', 'HTML/CSS', 'Node.js', 'Express'],
-  experince: {
+  experience: {
     Balbix: {
       name: 'Balbix Inc.',
       location: 'San Jose, CA',
