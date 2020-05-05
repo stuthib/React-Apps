@@ -17,7 +17,6 @@
   color: #FFFFFF;
   opacity: 0.6;
   height: 2vw;
-  //margin-top: 7.5vw;
   cursor: pointer;
 }
 
@@ -36,23 +35,23 @@
 
 .showNav_0 {
   -webkit-animation: navItem 0.5s forwards;
-  -webkit-animation-delay: 3s;
-  animation: navItem 0.5s forwards;
-  animation-delay: 3s;
-}
-
-.showNav_1 {
-  -webkit-animation: navItem 0.5s forwards;
   -webkit-animation-delay: 3.5s;
   animation: navItem 0.5s forwards;
   animation-delay: 3.5s;
 }
 
-.showNav_2 {
+.showNav_1 {
   -webkit-animation: navItem 0.5s forwards;
   -webkit-animation-delay: 4s;
   animation: navItem 0.5s forwards;
   animation-delay: 4s;
+}
+
+.showNav_2 {
+  -webkit-animation: navItem 0.5s forwards;
+  -webkit-animation-delay: 4.5s;
+  animation: navItem 0.5s forwards;
+  animation-delay: 4.5s;
 }
 
 @-webkit-keyframes navItem {
@@ -82,12 +81,11 @@
   margin-left: 8vw;
   position: absolute;
   animation: soft-load forwards;
-  animation-delay: 4s;
+  animation-delay: 3.5s;
   animation-duration: 2s;
 }
 
 @keyframes soft-load {
-
   0% {opacity: 0;}
   100% {
     opacity: 1;

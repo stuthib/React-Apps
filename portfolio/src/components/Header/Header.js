@@ -24,10 +24,10 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    this.logoTimer = setTimeout(this.showLogo, 1000);
-    this.gitIconTimer = setTimeout(this.showGitIcon, 1000);
-    this.linkedInTimer = setTimeout(this.showLinkedInIcon, 1500);
-    this.resumeTimer = setTimeout(this.showResume, 2000);
+    this.logoTimer = setTimeout(this.showLogo, 1500);
+    this.gitIconTimer = setTimeout(this.showGitIcon, 1500);
+    this.linkedInTimer = setTimeout(this.showLinkedInIcon, 2000);
+    this.resumeTimer = setTimeout(this.showResume, 2500);
   }
 
   componentWillUnmount() {
@@ -65,25 +65,29 @@ class Header extends React.Component {
 
   render() {
     const { displayLogo, displayGitIcon, displayLinkedIn, displayResume } = this.state;
+    const { display } = this.props;
     return (
-      <div className='Header'>
-        <header className='App-header'>
-          <div className='Icon-holder'>
-          {
-            displayLogo ? <img src={stuthi_logo} alt='logo'/> : ''
-          }
-          </div>
-          <div className='Links-holder'>
-            <GitHubIcon className={'header-link' + (displayGitIcon ? ' show' : ' hide')}
-                        onClick={() => this.gitHubIconClick()} />
-            <LinkedInIcon className={'header-link' + (displayLinkedIn ? ' show' : ' hide')}
-                        onClick={() => this.linkedInIconClick()}/>
-            <a className={'resume-link' + (displayResume ? ' show' : ' hide')}
-               href={resume} download>resume</a>
 
+        display ? (
+          <div className='Header'>
+            <header className='App-header'>
+              <div className='Icon-holder'>
+              {
+                displayLogo ? <img src={stuthi_logo} alt='logo'/> : ''
+              }
+              </div>
+              <div className='Links-holder'>
+                <GitHubIcon className={'header-link' + (displayGitIcon ? ' show' : ' hide')}
+                            onClick={() => this.gitHubIconClick()} />
+                <LinkedInIcon className={'header-link' + (displayLinkedIn ? ' show' : ' hide')}
+                            onClick={() => this.linkedInIconClick()}/>
+                <a className={'resume-link' + (displayResume ? ' show' : ' hide')}
+                   href={resume} download>resume</a>
+
+              </div>
+            </header>
           </div>
-        </header>
-      </div>
+        ) : ''
     );
   }
 }

@@ -1,6 +1,16 @@
 .Header {
   height: 4vw;
-  background-image: linear-gradient(to right, #1f2433 , #09fbd3);
+  animation: soft-load-header forwards;
+  animation-delay: 0s;
+  animation-duration: 2s;
+}
+
+@keyframes soft-load-header {
+  0% {opacity: 0;}
+  100% {
+    opacity: 1;
+    background-image: linear-gradient(to right, #1f2433 , #09fbd3);
+  }
 }
 
 .Icon-holder {

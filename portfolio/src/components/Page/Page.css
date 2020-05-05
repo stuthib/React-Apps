@@ -1,7 +1,32 @@
 .Page {
   background-color: #1f2433;
-  min-height: 50vw;
+  min-height: 75vw;
   font-family: Helvetica;
   font-size: 1.2vw;
   font-weight: 350;
+}
+
+.logo-holder {
+  animation: soft-vanish forwards;
+  animation-delay: 5s;
+  animation-duration: 3s;
+}
+
+@keyframes soft-vanish {
+  0% {opacity: 1;}
+  100% {
+    opacity: 0;
+  }
+}
+
+.logo-holder svg {
+  position: absolute;
+  width: 20%;
+  height: 75%;
+  margin-left: 40%;
+}
+
+.logo-holder path {
+  stroke-width: 2;
+  padding-top: 20vw;
 }
