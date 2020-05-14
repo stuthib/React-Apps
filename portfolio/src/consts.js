@@ -65,7 +65,7 @@ const constants  = {
     'NCHS Dashboard': {
       title: 'Data Visualization Dashboard',
       description: 'Sunburst and Grid representation of National Center for Health Statistics data, with auto-complete search and sorting functionality.',
-      technologies: ['React', 'Express', 'Lodash', 'CSS'],
+      technologies: ['React', 'Express', 'Highcharts', 'CSS'],
       githubLink: 'https://github.com/stuthib/React-Apps/tree/master/grid_dashboard',
       projectDetails: ['Sunburst Chart representation of the entire data provided by National Center for Health Statistics. This is an overall view of the given data.',
         'Clicking on one of the states, shows the detailed view. Example, clicking on California on the above chart represents this view.',
