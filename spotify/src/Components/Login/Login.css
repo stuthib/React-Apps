@@ -1,0 +1,26 @@
+.page-login {
+  height: 75vw;
+  background: linear-gradient(#0f2027,#203a43,#2c5364);
+}
+
+.login-section {
+  padding-top: 5vw;
+}
+
+.login-header {
+  color: #FFFFFF;/*#1CD8D2;*/
+  font-size: 1.8vw;
+  font-family: 'Sentinel Book', sans-serif;
+}
+
+.login-btn {
+  width: 15vw;
+  background: linear-gradient(45deg, #007991, #78ffd6);
+  color: #2C5364!important;
+  font-size: 1.2vw!important;
+  font-weight: 750!important;
+}
+
+.logo-img {
+  width: 25vw;
+}
