@@ -1,14 +1,32 @@
-const constants  = {
-  name : 'Stuthi Balaji',
-  title : 'Web Software Engineer',
+const constants = {
+  name: 'Stuthi Balaji',
+  title: 'Web Software Engineer',
   description: [
     'I am a New York based Software Engineer specializing in interactive web applications. ',
     'I graduated from ',
     'University of California Irvine',
     ', and since then have worked as an application developer. I believe in using modern technologies and frameworks to build high quality products.',
   ],
-  technologies: ['JavaScript (ES6)', 'React', 'Lodash', 'HTML/CSS', 'Node.js', 'Express'],
+  technologies: [
+    'JavaScript (ES6)',
+    'React',
+    'Lodash',
+    'HTML/CSS',
+    'Node.js',
+    'Express',
+  ],
   experience: {
+    DriveWealth: {
+      name: 'DriveWealth LLC.',
+      location: 'Jersey City, NJ',
+      time: 'Jun 2020 - current',
+      title: 'Software Engineer',
+      website: 'https://drivewealth.com/',
+      projects: [
+        'Responsible for re-achiture and and development of a wealth management application, using technologies such as React, Redux, MaterialUI, Styled-Components.',
+        'Developed DRY components including Modals, Forms, tables with custom sorting functionality.',
+      ],
+    },
     Balbix: {
       name: 'Balbix Inc.',
       location: 'San Jose, CA',
@@ -38,7 +56,7 @@ const constants  = {
     },
     Kareo: {
       name: 'Kareo',
-      link:'',
+      link: '',
       location: 'Irvine, CA',
       time: 'Jun 2015 - Dec 2015',
       title: 'Software Engineer Intern',
@@ -64,25 +82,31 @@ const constants  = {
   projects: {
     'NCHS Dashboard': {
       title: 'Data Visualization Dashboard',
-      description: 'Sunburst and Grid representation of National Center for Health Statistics data, with auto-complete search and sorting functionality.',
+      description:
+        'Sunburst and Grid representation of National Center for Health Statistics data, with auto-complete search and sorting functionality.',
       technologies: ['React', 'Express', 'Highcharts', 'CSS'],
-      githubLink: 'https://github.com/stuthib/React-Apps/tree/master/grid_dashboard',
-      projectDetails: ['Sunburst Chart representation of the entire data provided by National Center for Health Statistics. This is an overall view of the given data.',
+      githubLink:
+        'https://github.com/stuthib/React-Apps/tree/master/grid_dashboard',
+      projectDetails: [
+        'Sunburst Chart representation of the entire data provided by National Center for Health Statistics. This is an overall view of the given data.',
         'Clicking on one of the states, shows the detailed view. Example, clicking on California on the above chart represents this view.',
         'Grid representation of the data, which handles pagination for large data, column sorting and serach/filter along with auto-complete.',
-      ]
+      ],
     },
     'Tic-Tac-Toe': {
       title: 'Tic Tac Toe Game',
-      description: 'Two player game application implements a countdown timer, and algorithm to decide the outcome.',
+      description:
+        'Two player game application implements a countdown timer, and algorithm to decide the outcome.',
       technologies: ['React', 'MaterialUI', 'Lodash'],
-      githubLink: 'https://github.com/stuthib/React-Apps/tree/master/tic_tac_toe',
-      projectDetails: ['State of the game before the palayers start the game.',
+      githubLink:
+        'https://github.com/stuthib/React-Apps/tree/master/tic_tac_toe',
+      projectDetails: [
+        'State of the game before the palayers start the game.',
         'Representation of a countdown timer during the game.',
         'Implementation of an algorithm to decide the outcome of the game.',
-      ]
+      ],
     },
   },
 }
 
-export default constants;
+export default constants

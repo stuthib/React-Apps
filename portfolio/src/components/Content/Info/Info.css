@@ -2,7 +2,7 @@
   height: 50vw;
   margin: 0.5vw 5vw;
   width: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
   float: right;
   animation: soft-load-info forwards;
   animation-delay: 0s;
@@ -22,20 +22,22 @@
   }
 }
 
-.about, .experience {
+.about,
+.experience {
   margin: 1vw 0vw;
 }
 
-.name, .title{
+.name,
+.title {
   font-size: 3vw;
   text-align: center;
   margin: 1vw;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .title {
-  font-size: 2vw!important;
-  color: #09fbd3!important;
+  font-size: 2vw !important;
+  color: #09fbd3 !important;
 }
 
 .description {
@@ -45,12 +47,11 @@
 }
 
 .link {
-  color: #09fbd3!important;
-  opacity: 1!important;
+  color: #09fbd3 !important;
+  opacity: 1 !important;
   cursor: pointer;
 }
 .Education {
-
 }
 
 .hideInfo {
@@ -94,9 +95,9 @@
 
 .chevron-right {
   color: #09fbd3;
-  width: 1.2vw!important;
-  height: 1.2vw!important;
-  margin: 0.15vw 0.3vw!important;
+  width: 1.2vw !important;
+  height: 1.2vw !important;
+  margin: 0.15vw 0.3vw !important;
 }
 
 .profile-img {
@@ -105,40 +106,39 @@
 }
 
 .btn-outline {
-  color: #09fbd3!important;
-  border: 0.1vw solid #09fbd3!important;
-  font-family: serif!important;
-  margin-top: 3vw!important;
-  font-size: 1.2vw!important;
-  padding: 0.5vw 1vw!important;
+  color: #09fbd3 !important;
+  border: 0.1vw solid #09fbd3 !important;
+  font-family: serif !important;
+  margin-top: 3vw !important;
+  font-size: 1.2vw !important;
+  padding: 0.5vw 1vw !important;
   float: left;
 }
 
 .btn-outline:hover {
-  background-color: #09fbd345!important;
+  background-color: #09fbd345 !important;
 }
 
- .experience-title {
-   margin: 1vw 0vw;
-   color: #FFFFFF!important;
-   display: none;
- }
+.experience-title {
+  margin: 1vw 0vw;
+  color: #ffffff !important;
+}
 
 .experience-list {
   margin: 2vw 0vw 0.5vw;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .experience-item {
-  width: 25%;
   opacity: 0.8;
   font-size: 1.5vw;
 }
 
 .experience-selected {
-  color: #79FFFE;
-  opacity: 1!important;
+  color: #79fffe;
+  opacity: 1 !important;
 }
 
 .hr-margin-1 {
@@ -152,12 +152,12 @@
 }
 
 hr {
-  height: .25rem;
+  height: 0.25rem;
   width: 4vw;
   margin: 0;
   background: #09fbd3;
   border: none;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .experience-details {
@@ -182,23 +182,25 @@ hr {
   cursor: pointer;
 }
 
-.logo-title > div, .experience-title > span {
+.logo-title > div,
+.experience-title > span {
   margin: 1vw;
   opacity: 0.8;
-  font-size: 1.5vw
+  font-size: 1.5vw;
 }
 
 .experience-name {
   font-size: 1.5vw;
   cursor: pointer;
-  color: #79FFFE!important;
+  color: #79fffe !important;
 }
 
 .timeframe {
-  font-size: 1vw!important;
+  font-size: 1vw !important;
 }
 
-.experience-projects, .experience-title {
+.experience-projects,
+.experience-title {
   margin: 2vw 0vw;
   line-height: 2vw;
 }
@@ -227,7 +229,7 @@ hr {
   width: 22vw;
   height: 22vw;
   background-color: #333538;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .project-card-title {
@@ -251,7 +253,7 @@ hr {
 
 .project-card-tech > span {
   margin-right: 1.2vw;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.8;
 }
 
@@ -262,12 +264,12 @@ hr {
 
 .card-icon {
   margin: 1vw 1vw 0vw 0vw;
-  color: #79FFFE!important;
-  width: 1.5vw!important;
+  color: #79fffe !important;
+  width: 1.5vw !important;
 }
 
 .hideGitIcon {
-  display: none!important;
+  display: none !important;
   width: 0vw;
 }
 
@@ -298,13 +300,13 @@ hr {
 
 .modalDetail > div {
   margin: 2vw;
-  color: #FFF;
+  color: #fff;
   opacity: 0.6;
 }
 
 .close-icon {
   float: right;
   margin: 2vw;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
 }

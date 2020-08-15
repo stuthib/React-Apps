@@ -10,8 +10,8 @@
   margin-left: 14.2vw;
   position: absolute;
   animation: soft-load-divider forwards;
-  animation-delay: 4s;
-  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 
 @keyframes soft-load-divider {

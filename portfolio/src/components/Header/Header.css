@@ -2,14 +2,16 @@
   height: 4vw;
   animation: soft-load-header forwards;
   animation-delay: 0s;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @keyframes soft-load-header {
-  0% {opacity: 0;}
+  0% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
-    background-image: linear-gradient(to right, #1f2433 , #09fbd3);
+    background-image: linear-gradient(to right, #1f2433, #09fbd3);
   }
 }
 
@@ -31,16 +33,16 @@
 }
 
 .show {
-  display: block!important;
+  display: block !important;
 }
 
 .hide {
-  display: none!important;
+  display: none !important;
 }
 
 .header-link {
   cursor: pointer;
-  width: 7vw!important;
+  width: 7vw !important;
 }
 
 .resume-link {

@@ -14,7 +14,7 @@
 .Nav li {
   list-style-type: none;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.6;
   height: 2vw;
   cursor: pointer;
@@ -27,39 +27,44 @@
   height: 5vw;
 }
 
-.selected, .showNav:hover {
+.selected,
+.showNav:hover {
   font-weight: 450;
-  opacity: 1!important;
-  color: #79FFFE!important;
+  opacity: 1 !important;
+  color: #79fffe !important;
 }
 
 .showNav_0 {
   -webkit-animation: navItem 0.5s forwards;
-  -webkit-animation-delay: 3.5s;
+  -webkit-animation-delay: 1s;
   animation: navItem 0.5s forwards;
-  animation-delay: 3.5s;
+  animation-delay: 1s;
 }
 
 .showNav_1 {
   -webkit-animation: navItem 0.5s forwards;
-  -webkit-animation-delay: 4s;
+  -webkit-animation-delay: 1.25s;
   animation: navItem 0.5s forwards;
-  animation-delay: 4s;
+  animation-delay: 1.25s;
 }
 
 .showNav_2 {
   -webkit-animation: navItem 0.5s forwards;
-  -webkit-animation-delay: 4.5s;
+  -webkit-animation-delay: 1.5s;
   animation: navItem 0.5s forwards;
-  animation-delay: 4.5s;
+  animation-delay: 1.5s;
 }
 
 @-webkit-keyframes navItem {
-    100% { left: 0; }
+  100% {
+    left: 0;
+  }
 }
 
 @keyframes navItem {
-    100% { left: 0; }
+  100% {
+    left: 0;
+  }
 }
 
 .Nav li:first-child {
@@ -77,19 +82,21 @@
 .vertical-slider {
   width: 3vw;
   height: 3vw;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   margin-left: 8vw;
   position: absolute;
   animation: soft-load forwards;
-  animation-delay: 3.5s;
-  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-duration: 1s;
 }
 
 @keyframes soft-load {
-  0% {opacity: 0;}
+  0% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
-    border-right: 0.2vw solid #79FFFE;
+    border-right: 0.2vw solid #79fffe;
   }
 }
 

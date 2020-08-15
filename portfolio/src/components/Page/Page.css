@@ -8,12 +8,14 @@
 
 .logo-holder {
   animation: soft-vanish forwards;
-  animation-delay: 5s;
-  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-duration: 1s;
 }
 
 @keyframes soft-vanish {
-  0% {opacity: 1;}
+  0% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
   }

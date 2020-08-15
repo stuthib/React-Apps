@@ -1,45 +1,44 @@
-import React from 'react';
-import '../Info.css';
-import { get, keys } from 'lodash';
-import constants  from '../../../../consts';
-import DetailsIcon from '@material-ui/icons/Details';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import Modal from '@material-ui/core/Modal';
-import CloseIcon from '@material-ui/icons/Close';
+import React from 'react'
+import '../Info.css'
+import { get, keys } from 'lodash'
+import constants from '../../../../consts'
+import DetailsIcon from '@material-ui/icons/Details'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import Modal from '@material-ui/core/Modal'
+import CloseIcon from '@material-ui/icons/Close'
 
-import sunburst_main  from '../../../../attachments/nchs_dashboard/sunburst_main.png';
-import sunburst_detail_view  from '../../../../attachments/nchs_dashboard/sunburst_detailed.png';
-import grid_view  from '../../../../attachments/nchs_dashboard/gridview.png';
+import sunburst_main from '../../../../attachments/nchs_dashboard/sunburst_main.png'
+import sunburst_detail_view from '../../../../attachments/nchs_dashboard/sunburst_detailed.png'
+import grid_view from '../../../../attachments/nchs_dashboard/gridview.png'
 
-import start  from '../../../../attachments/tic_tac_toe/start.png';
-import mid  from '../../../../attachments/tic_tac_toe/mid.png';
-import end  from '../../../../attachments/tic_tac_toe/end.png';
+import start from '../../../../attachments/tic_tac_toe/start.png'
+import mid from '../../../../attachments/tic_tac_toe/mid.png'
+import end from '../../../../attachments/tic_tac_toe/end.png'
 
 class Projects extends React.Component {
-
   gitHubIconClick(link) {
-    window.open(link);
-    return false;
+    window.open(link)
+    return false
   }
 
   getProjectDeatils(projectName) {
-    const projectDetails = constants.projects[projectName];
+    const projectDetails = constants.projects[projectName]
     let projectImages = {
       'NCHS Dashboard': [sunburst_main, sunburst_detail_view, grid_view],
       'Tic-Tac-Toe': [start, mid, end],
     }
     let details = projectDetails.projectDetails.map((item, index) => {
-      let images = projectImages[projectName];
+      let images = projectImages[projectName]
       return {
         image: images[index],
         description: item,
       }
     })
-    return details;
+    return details
   }
 
   detailViewClick(item) {
-    console.log('onclick: ', item);
+    console.log('onclick: ', item)
     this.setState({
       openModal: true,
       projectClicked: item,
@@ -53,77 +52,75 @@ class Projects extends React.Component {
   }
 
   renderModal() {
-    const imagesToShow = this.getProjectDeatils(get(this.state,'projectClicked',[]));
-    return(
-      <div className='modal'>
+    const imagesToShow = this.getProjectDeatils(
+      get(this.state, 'projectClicked', [])
+    )
+    return (
+      <div className="modal">
         <Modal
-          open={get(this.state,'openModal', true)}
+          open={get(this.state, 'openModal', true)}
           onClose={() => this.closeModalView()}
-          className='modalContainer'
+          className="modalContainer"
         >
-        {
-          <div className='modal-data-holder'>
-            <CloseIcon className='close-icon' onClick={() => this.closeModalView()}/>
-            {
-              imagesToShow.map((detail, index) => {
-                return(
-                  <div key={index} className='modalDetail'>
-                    <img src={detail.image} alt='img'/>
-                    <div>
-                    {
-                      get(detail,'description','')
-                    }
-                    </div>
+          {
+            <div className="modal-data-holder">
+              <CloseIcon
+                className="close-icon"
+                onClick={() => this.closeModalView()}
+              />
+              {imagesToShow.map((detail, index) => {
+                return (
+                  <div key={index} className="modalDetail">
+                    <img src={detail.image} alt="img" />
+                    <div>{get(detail, 'description', '')}</div>
                   </div>
                 )
-              })
-            }
-          </div>
-        }
+              })}
+            </div>
+          }
         </Modal>
       </div>
     )
   }
 
   render() {
-    const { showInfo } = this.props;
-    const projects = keys(constants.projects);
+    const { showInfo } = this.props
+    const projects = keys(constants.projects)
     return (
       <div className={showInfo ? 'projects' : 'hideInfo'}>
-        {
-          projects.map((item, index) => {
-            let cardData = constants.projects[item];
-            let showGitHubIcon = !get(cardData,'githubLink') ? ' hideGitIcon' : '';
-            return(
-              <div key={index} className='project-card'>
-                <div className='card-links'>
-                  <DetailsIcon className='card-icon' onClick={() => this.detailViewClick(item)}/>
-                  <GitHubIcon className={'card-icon' + showGitHubIcon}
-                              onClick={() => this.gitHubIconClick(cardData.githubLink)}/>
-                </div>
-                <div className='project-card-title'>{cardData.title}</div>
-                <div className='project-card-details'>{cardData.description}</div>
-                <div className='project-card-tech'>
-                {
-                  cardData.technologies.map((tech, i) => {
-                    return(
-                      <span key={i}>{tech}</span>
-                    )
-                  })
-                }
-                </div>
+        {projects.map((item, index) => {
+          let cardData = constants.projects[item]
+          let showGitHubIcon = !get(cardData, 'githubLink')
+            ? ' hideGitIcon'
+            : ''
+          return (
+            <div key={index} className="project-card">
+              <div className="card-links">
+                <DetailsIcon
+                  className="card-icon"
+                  onClick={() => this.detailViewClick(item)}
+                />
+                <GitHubIcon
+                  className={'card-icon' + showGitHubIcon}
+                  onClick={() => this.gitHubIconClick(cardData.githubLink)}
+                />
               </div>
-            )
-          })
-        }
+              <div className="project-card-title">{cardData.title}</div>
+              <div className="project-card-details">{cardData.description}</div>
+              <div className="project-card-tech">
+                {cardData.technologies.map((tech, i) => {
+                  return <span key={i}>{tech}</span>
+                })}
+              </div>
+            </div>
+          )
+        })}
         <div>
-        {
-          get(this.state,'openModal', false) ? this.renderModal() : ''
-        }
+          {get(this.state, 'openModal', false) ? this.renderModal() : ''}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Projects;
+export default Projects
