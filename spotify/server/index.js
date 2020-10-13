@@ -6,7 +6,7 @@
  * For more information, read
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
  */
-import credentials from './credentials.js';
+const credentials = require('./credentials.js');
 const { get, has, forEach, keys, find, set } = require('lodash');
 const PORT = process.env.PORT || 5000;
 
@@ -124,7 +124,7 @@ app.get('/callback', function(req, res) {
           user_details['email'] = body['email'];
           console.log('USER DETAILS ', JSON.stringify(user_details));
           // we can also pass the token to the browser to make requests from there
-          res.redirect('http://localhost:3000/#' +
+          res.redirect('http://localhost:5000/#' +
             querystring.stringify({
               access_token: access_token,
               refresh_token: refresh_token,

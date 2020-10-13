@@ -1,0 +1,31 @@
+.collaborate-container {
+  height: 15vw;
+  background-color: #0000007a;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.collaborate-box {
+  margin: auto;
+  width: 50%;
+  padding: 1vw;
+}
+
+.collaborate-text {
+  padding-bottom: 1vw;
+  font-size: 1.5vw;
+}
+
+.collaborate-input {
+  margin-bottom: 1vw;
+  width: 25vw;
+  height: 2.5vw;
+  opacity: 0.8;
+}
+
+.collaborate-btn {
+  width: 7vw;
+  height: 2.5vw;
+  color: #1c2e3d!important;
+  background-color: #78ffd6!important;
+}

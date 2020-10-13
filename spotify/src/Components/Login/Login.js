@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { get } from 'lodash';
 import Dashboard from '../Dashboard/Dashboard';
 import LoginPage from './LoginPage';
@@ -12,57 +12,45 @@ const spotifyApi = new SpotifyWebApi();
 const hostURL = "http://localhost:5000";
 const socket = socketIOClient(hostURL);
 
-class Login extends React.Component {
+function Login() {
 
-  constructor(props) {
-    super(props);
-    let params = this.getHashParams();
+  const [loginSuccess, setLoginSuccess] = useState(false);
+  const [userDetails, setUserDetails] = useState(null);
+
+  useEffect(() => {
+    socket.on('to client', (data) => {
+      socket.emit('to server', 'Hello Server!');
+    });
+    let params = getHashParams();
     const token = params.access_token;
     if (token) {
       spotifyApi.setAccessToken(token);
     }
-    this.state = {
-      loginSuccess : token ? true : false,
-      userDetails : JSON.parse(get(params,'user_details','{}')),
-    };
-  }
+    setLoginSuccess(token);
+    setUserDetails(JSON.parse(get(params, 'user_details', '{}')));
+  },[loginSuccess])
 
-  componentDidMount() {
-    socket.on('to client', (data) => {
-      socket.emit('to server', 'Hello Server!');
-      console.log(data);
-    });
-  }
-
-  componentDidUnMount() {
-    console.log('componentDidUnMount');
-  }
-
-  getHashParams() {
+  const getHashParams = () => {
     var hashParams = {};
     var e, r = /([^&;=]+)=?([^&;]*)/g,
         q = window.location.hash.substring(1);
     e = r.exec(q);
     while (e) {
-       hashParams[e[1]] = decodeURIComponent(e[2]);
-       e = r.exec(q);
+        hashParams[e[1]] = decodeURIComponent(e[2]);
+        e = r.exec(q);
     }
     return hashParams;
   }
 
-  render() {
-    console.log(this.state);
-    const { userDetails } = this.state;
-    return(
-      <div >
-        {
-          this.state.loginSuccess ?
-            <Dashboard userDetails={userDetails}/> :
-            <LoginPage />
-        }
-      </div>
-    )
-  }
+  return(
+    <div >
+      {
+        loginSuccess ?
+          <Dashboard userDetails={userDetails}/> :
+          <LoginPage />
+      }
+    </div>
+  )
 }
 
 export default Login;
