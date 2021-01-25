@@ -2,13 +2,13 @@ const constants = {
   name: 'Stuthi Balaji',
   title: 'Web Software Engineer',
   description: [
-    'I am a New York based Software Engineer specializing in interactive web applications. ',
+    'I am a Software Engineer based in Toronto, specializing in interactive web applications. ',
     'I graduated from ',
     'University of California Irvine',
     ', and since then have worked as an application developer. I believe in using modern technologies and frameworks to build high quality products.',
   ],
   technologies: [
-    'JavaScript (ES6)',
+    'JavaScript (ES6+)',
     'React',
     'Lodash',
     'HTML/CSS',
@@ -23,8 +23,9 @@ const constants = {
       title: 'Software Engineer',
       website: 'https://drivewealth.com/',
       projects: [
-        'Responsible for re-achiture and and development of a wealth management application, using technologies such as React, Redux, MaterialUI, Styled-Components.',
-        'Developed DRY components including Modals, Forms, tables with custom sorting functionality.',
+        'Responsible for re-achiture and and development of a wealth management application, using technologies such as React, Redux, Hooks, Styled-Components.',
+        'Developed DRY components including Modals, Forms, tables with custom sorting, filtering and search functionality.',
+        'Developed an efficient and reusable feature to convert and export/download large JSON datasets as CSV.'
       ],
     },
     Balbix: {
