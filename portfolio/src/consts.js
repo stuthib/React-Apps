@@ -19,7 +19,7 @@ const constants = {
     DriveWealth: {
       name: 'DriveWealth LLC.',
       location: 'Jersey City, NJ',
-      time: 'Jun 2020 - current',
+      time: 'Jun 2020 (Started as full-time engineer, continuing as independent contractor)',
       title: 'Software Engineer',
       website: 'https://drivewealth.com/',
       projects: [
